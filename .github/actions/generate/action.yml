@@ -15,18 +15,6 @@ runs:
       - name: Setup JS
         uses: ./.github/actions/setup-js
 
-      - name: Setup Rust (Android)
-        if: ${{ inputs.platform == 'android' }}
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: aarch64-linux-android,armv7-linux-androideabi,i686-linux-android,x86_64-linux-android
-
-      - name: Setup Rust (iOS)
-        if: ${{ inputs.platform == 'ios' }}
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: aarch64-apple-ios,aarch64-apple-ios-sim,x86_64-apple-ios
-
       - name: Install cargo-ndk
         if: ${{ inputs.platform == 'android' }}
         shell: bash
@@ -48,14 +36,14 @@ runs:
       - name: Generate
         shell: bash
         env:
-          INFIX: ${{ inputs.release == 'true' && ':release' || '' }}
-          SUFFIX: ${{ inputs.platform == 'android' && ':android' || ':ios' }}
+          PLAT: ${{ inputs.platform == 'android' && ':android' || ':ios' }}
+          MODE: ${{ inputs.release == 'true' && '--release' || '' }}
         run:
-          yarn generate$INFIX$SUFFIX
+          yarn ubrn:$PLAT $MODE
 
       - name: Free space
         shell: bash
-        run: rm -rf rust_modules
+        run: cd nostr-sdk-ffi && cargo clean
 
       - name: Check if repository is dirty
         shell: bash
