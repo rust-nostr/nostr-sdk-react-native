@@ -1,0 +1,3 @@
+[submodule "nostr-sdk-ffi"]
+	path = nostr-sdk-ffi
+	url = https://github.com/rust-nostr/nostr-sdk-ffi
