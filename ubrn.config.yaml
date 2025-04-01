@@ -1,0 +1,4 @@
+---
+rust:
+  directory: deps/nostr-sdk-ffi
+  manifestPath: Cargo.toml
