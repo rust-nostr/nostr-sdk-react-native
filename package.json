@@ -1,6 +1,6 @@
 {
-  "name": "nostr-sdk-react-native",
-  "version": "0.1.0",
+  "name": "@rust-nostr/nostr-sdk-react-native",
+  "version": "0.40.0",
   "description": "Nostr SDK - React Native Turbo Module",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -50,6 +50,8 @@
     "release": "release-it"
   },
   "keywords": [
+    "nostr",
+    "rust-nostr",
     "react-native",
     "ios",
     "android"
@@ -114,7 +116,7 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "chore: release ${version}",
+      "commitMessage": "Release ${version}",
       "tagName": "v${version}"
     },
     "npm": {
