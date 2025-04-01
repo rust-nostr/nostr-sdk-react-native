@@ -205,6 +205,6 @@
     "version": "0.48.3"
   },
   "dependencies": {
-    "uniffi-bindgen-react-native": "https://github.com/reyamir/uniffi-bindgen-react-native"
+    "uniffi-bindgen-react-native": "^0.29.0-0"
   }
 }
