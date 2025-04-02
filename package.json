@@ -51,6 +51,8 @@
     "release": "release-it"
   },
   "keywords": [
+    "nostr",
+    "rust-nostr",
     "react-native",
     "ios",
     "android"
