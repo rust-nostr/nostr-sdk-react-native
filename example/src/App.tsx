@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { Keys } from 'nostr-sdk-react-native';
+import { Keys } from '../../src';
 
 const keys = Keys.generate();
 
