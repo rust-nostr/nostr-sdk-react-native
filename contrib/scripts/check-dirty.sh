@@ -6,7 +6,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIR="${SCRIPT_DIR}/../.."
 
 # Collect changed files (excluding lines matching $EXCLUDE and the Podfile.lock)
-CHANGED_FILES="$(git status --porcelain | grep -v example/ios/Podfile.lock | awk '{print $2}')"
+CHANGED_FILES="$(git status --porcelain | grep -v example/ios/Podfile.lock | grep -v RustNostrNostrSdkReactNativeFramework.xcframework/Info.plist | awk '{print $2}')"
 
 # If there are changes, show details and file contents
 if [[ -n "$CHANGED_FILES" ]]; then
