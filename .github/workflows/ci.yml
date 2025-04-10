@@ -24,7 +24,7 @@ jobs:
         uses: ./.github/actions/generate
         with:
           platform: android
-          release: true # Some android target fails to compile in debug due to unstable panic_immediate_abort option
+          release: false
 
       - name: Cache turborepo for Android
         uses: actions/cache@v4
