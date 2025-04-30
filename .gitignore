@@ -27,7 +27,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+*.xcworkspace
 **/.xcode.env.local
 
 # Android/IJ
@@ -44,6 +44,7 @@ android.iml
 # Cocoapods
 #
 example/ios/Pods
+Podfile.lock
 
 # Ruby
 example/vendor/
@@ -80,6 +81,7 @@ lib/
 
 # React Native Codegen
 RustNostrNostrSdkReactNativeFramework.xcframework/
+rust-nostr-nostr-sdk-react-native.podspec
 ios/
 android/
 cpp/
